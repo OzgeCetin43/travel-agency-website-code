@@ -1,0 +1,144 @@
+.plan-trip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 2rem auto;
+}
+
+.plen-trip-left-container,
+.plan-trip-right-container {
+  width: 50%;
+}
+
+.plan-trip-left-container {
+  position: relative;
+}
+
+.plan-trip-image {
+  border-radius: 1rem;
+}
+
+.discount-label {
+  padding: 5px;
+  position: relative;
+  float: left;
+  margin-top: 35px;
+  margin-left: 60px;
+  width: 60px;
+  -webkit-border-radius: 0 4px 0 4px;
+  -moz-border-radius: 0 4px 0 4px;
+  border-radius: 0 4px 4px 0;
+}
+
+.discount-label:after {
+  right: 100%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 20px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.discount-label:before {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  top: 42%;
+  right: 100%;
+  width: 7px;
+  height: 7px;
+  opacity: 0.95;
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: inset 0.5px 0 rgba(0, 0, 0, 0.6);
+}
+
+.discount-label span {
+  color: #eee;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.discount {
+  background-color: #ff715b;
+}
+
+.discount:after {
+  border-right-color: #ff715b;
+}
+
+.discount-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+.plan-trip-right-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-trip-sub-title {
+  background-color: #fff5f5;
+  color: #ff715b;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+.plan-trip-title {
+  font-size: 2.5rem;
+}
+
+.plan-trip-description {
+  line-height: 2;
+}
+
+.plan-trip-content-detail {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.plan-trip-content-detail svg {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 920px) {
+  .plan-trip-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .plen-trip-left-container,
+  .plan-trip-right-container {
+    width: 100%;
+  }
+
+  .plan-trip-image {
+    width: 100%;
+  }
+
+  .plan-trip-title {
+    font-size: 1rem;
+  }
+
+  .plan-trip-description {
+    font-size: 0.75rem;
+  }
+
+  .content-detail {
+    font-size: 0.75rem;
+  }
+}

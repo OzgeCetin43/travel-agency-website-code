@@ -1,0 +1,158 @@
+.home-container {
+  margin: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.home-container-left,
+.home-container-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container-left-content {
+  width: 70%;
+}
+
+.home-container-sub-title {
+  background-color: #fff5f5;
+  color: #ff715b;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+.home-container-sub-title svg {
+  position: relative;
+  top: 0.15rem;
+  left: 0.5rem;
+}
+
+.home-container-title {
+  font-size: 2.5rem;
+  color: #212121;
+  text-transform: uppercase;
+}
+
+.home-container-title b {
+  color: #ff715b;
+}
+
+.home-container-description {
+  font-size: 1.1rem;
+  line-height: 2;
+  margin: 1rem 0;
+}
+
+.video-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.home-video {
+  background-color: #fff5f5;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ff715b;
+}
+
+.home-video-arrow {
+  position: absolute;
+  font-size: 50px;
+  transform: rotate(90deg);
+  color: #ff715b;
+}
+
+.home-video-description {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.home-container-actions {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.trip-button {
+  background-color: transparent;
+  color: #ff715b;
+  font-weight: bolder;
+  border: 2px solid #ff715b;
+  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+  margin: 1rem 0;
+  margin-right: 1rem;
+}
+
+.book-button {
+  background-color: transparent;
+  background-color: #ff715b;
+  color: #eee;
+  font-weight: bolder;
+  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+  margin: 1rem 0;
+}
+
+.hero {
+  width: 70%;
+  height: 500px;
+  object-fit: contain;
+}
+
+@media (max-width: 920px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-container-left,
+  .home-container-right {
+    width: 100%;
+  }
+
+  .home-container-left-content {
+    width: 90%;
+  }
+
+  .hero {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .home-container-title {
+    font-size: 1rem;
+  }
+
+  .home-container-description {
+    font-size: 0.85rem;
+  }
+
+  .trip-button,
+  .book-button {
+    font-size: 0.85rem;
+  }
+
+  .home-video {
+    width: 25px;
+    height: 25px;
+  }
+
+  .home-video-arrow {
+    font-size: 25px;
+  }
+
+  .home-video-description {
+    font-size: 0.85rem;
+  }
+}

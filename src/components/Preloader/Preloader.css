@@ -1,0 +1,36 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  transition: 250ms ease-in-out;
+}
+
+.preloader.remove {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.preloader-image {
+  animation: bounce 800ms ease-in-out infinite alternate;
+}
+
+.preloader-inner {
+  position: relative;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

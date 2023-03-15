@@ -1,0 +1,104 @@
+.testimonials-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #212121;
+  height: 325px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-items {
+  position: relative;
+  width: 400%;
+  display: flex;
+  transition: all 0.6s cubic-bezier(0.858, 0.01, 0.068, 0.99);
+}
+
+.carousel-item {
+  width: 25%;
+}
+
+.carousel-caption {
+  padding: 3rem;
+  text-align: center;
+}
+
+.carousel-caption img {
+  display: inline-block;
+  max-width: 130px;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1ps solid #efefef;
+  box-shadow: 0.1rem 0.15rem 0.5rem #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption h2 {
+  color: #ff715b;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.carousel-caption .carousel-item-description {
+  color: #eee;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.carousel input {
+  display: none;
+}
+
+.indicators {
+  width: 100%;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicators label {
+  position: relative;
+  width: 25px;
+  height: 0.5rem;
+  margin: 0 0.25rem;
+  background-color: #ff715b80;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+#indicator1:checked ~ .indicators label:nth-child(1),
+#indicator2:checked ~ .indicators label:nth-child(2),
+#indicator3:checked ~ .indicators label:nth-child(3) {
+  background-color: #ff715b;
+}
+
+#indicator1:checked ~ .carousel-items {
+  transform: translate(0%);
+}
+
+#indicator2:checked ~ .carousel-items {
+  transform: translate(-25%);
+}
+
+#indicator3:checked ~ .carousel-items {
+  transform: translate(-50%);
+}
+
+@media (max-width: 920px) {
+  .testimonials-container {
+    height: auto;
+  }
+
+  .carousel-caption {
+    padding: 50px 70px 80px;
+  }
+}
