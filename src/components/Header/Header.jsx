@@ -16,9 +16,9 @@ const Header = () => {
         <header className='header'>
             <img src={logo} alt="logo" className='logo' />
             <nav className='navigation' ref={navRef}>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/">Login</NavLink>
-                <NavLink to="/" className="sign-up-button">Sign Up</NavLink>
+                <NavLink to="/travel-agency-website/">Home</NavLink>
+                <NavLink to="/travel-agency-website/">Login</NavLink>
+                <NavLink to="/travel-agency-website/" className="sign-up-button">Sign Up</NavLink>
                 <button className='nav-button nav-close-button' onClick={showNavbar}>
                     <BiCross />
                 </button>
