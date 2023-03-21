@@ -31,12 +31,12 @@ const Login = () => {
                                     <input type="checkbox" className='login-check-box' />
                                     <span className='remember-text'>Remember me</span>
                                 </div>
-                                <a href="/travel-agency-website/login" className='forgot-password'>Forgot Password</a>
+                                <NavLink to="/travel-agency-website/login" className='forgot-password'>Forgot Password</NavLink>
                             </div>
                             <NavLink to="/travel-agency-website/" className="sign-in-button">Sign In</NavLink>
                             <div className="login-register">
                                 <p>Don't have an account?</p>
-                                <a href='/travel-agency-website/login' className='register-link'> Sign Up</a>
+                                <NavLink to='/travel-agency-website/login' className='register-link'>Sign Up</NavLink>
                             </div>
                         </form>
                     </div>
