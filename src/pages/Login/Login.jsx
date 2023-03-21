@@ -20,10 +20,10 @@ const Login = () => {
                         <form action="#">
                             <h2 className='sign-in-title'>Sign In</h2>
                             <p className='sign-in-description'>Sign in your account</p>
-                            <div className="input-container">
+                            <div className="login-input-container">
                                 <input type="email" required placeholder='E-mail' />
                             </div>
-                            <div className="input-container">
+                            <div className="login-input-container">
                                 <input type="password" placeholder='Password' />
                             </div>
                             <div className="remember-me-container">

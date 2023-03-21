@@ -2,26 +2,23 @@
   height: calc(100vh - 70px);
   background: #fff5f5;
   width: 100%;
+  position: relative;
 }
 
 .login-inner-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 75%;
+  margin: auto;
   height: 650px;
   background: url('../../assets/images/news-letter-bg.jpg');
   background-position: center;
   background-size: cover;
   border-radius: 1rem;
-  margin-top: 1.25rem;
 }
 
 .login-container-content {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 60%;
   height: 100%;
   padding: 2rem;
@@ -29,9 +26,6 @@
 }
 
 .login-area-container {
-  position: absolute;
-  top: 0;
-  right: 0;
   width: 40%;
   height: 100%;
 }
@@ -77,15 +71,14 @@
   line-height: 2;
 }
 
-.input-container {
-  position: relative;
+.login-input-container {
   width: 340px;
   height: 50px;
   border-bottom: 2px solid #ff715b;
   margin: 2rem 0;
 }
 
-.input-container input {
+.login-input-container input {
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -115,7 +108,6 @@
 }
 
 .forgot-password {
-  position: relative;
   top: 2px;
   font-size: 0.85rem;
   text-decoration: underline;
@@ -147,14 +139,24 @@
   text-decoration: underline;
   text-underline-offset: 0.25rem;
 }
-
-.login-image {
-  display: none;
-}
-
 @media (max-width: 920px) {
+  .login-container {
+    height: auto;
+  }
+
   .login-inner-container {
-    width: 95%;
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .login-container-content {
+    width: 100%;
+  }
+
+  .login-title {
+    font-size: 1.85rem;
   }
 
   .login-area-container {
@@ -163,6 +165,15 @@
   }
 
   .form-box {
-    border-radius: 0;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .form-box form {
+    width: 95%;
+  }
+
+  .login-input-container {
+    width: 100%;
   }
 }

@@ -95,7 +95,7 @@ const Destinations = () => {
                             </div>
                             <div className="input-container">
                                 <label htmlFor="date">Date</label>
-                                <input type="date" id="date" name="date" />
+                                <input type="date" id="date" name="date" className='destinations-date-input' />
                             </div>
                             <div className="input-container">
                                 <button type='submit' className='find-now-button'>Find Now</button>

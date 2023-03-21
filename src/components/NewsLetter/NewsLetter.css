@@ -22,7 +22,7 @@
   width: 100%;
 }
 
-.form-box {
+.news-letter-form-box {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
   margin: 1rem 2.5% 1rem 2.5%;
   border: none;
   outline: none;
-  color: #ff715b;
+  color: #eee;
   background-color: transparent;
   border-bottom: 1px solid #eee;
 }
@@ -77,6 +77,6 @@
 
 @media (max-width: 920px) {
   .news-letter-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }

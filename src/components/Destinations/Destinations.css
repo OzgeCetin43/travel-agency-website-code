@@ -4,18 +4,11 @@
 }
 
 .destinations-banner {
-  background: linear-gradient(
-      0deg,
-      rgba(33, 33, 33, 0.5),
-      rgba(33, 33, 33, 0.5)
-    ),
-    url('../../assets/images/destinations-banner.png');
-  height: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #eee;
+  color: #212121;
   border-radius: 1rem;
 }
 
@@ -26,6 +19,7 @@
 .destinations-description {
   font-size: 2rem;
   font-weight: bold;
+  color: #ff715b;
 }
 
 .destinations-inner-container {
@@ -42,15 +36,7 @@
   margin: 2rem 0;
   padding: 1rem;
   border-radius: 1rem;
-  background: linear-gradient(
-      0deg,
-      rgba(33, 33, 33, 0.5),
-      rgba(33, 33, 33, 0.5)
-    ),
-    url('../../assets/images/destination-left.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #eee;
+  color: #212121;
 }
 
 .input-container {
@@ -97,11 +83,17 @@
   color: #ff715b;
   border-radius: 0.25rem;
   height: 50px;
+  border: 1px solid #212121;
 }
 
 .destinations-left form select option {
   color: #212121;
   font-weight: bold;
+}
+
+.destinations-date-input {
+  border: 1px solid #212121;
+  border-radius: 0.25rem;
 }
 
 .find-now-button {
@@ -227,6 +219,7 @@
   .destinations-left,
   .destinations-right {
     width: 100%;
+    margin: 0;
   }
 
   .input-container {
