@@ -17,6 +17,7 @@ const Header = () => {
             <img src={logo} alt="logo" className='logo' />
             <nav className='navigation' ref={navRef}>
                 <NavLink to="/travel-agency-website/">Home</NavLink>
+                <NavLink to="/travel-agency-website/destinations-detail">Destinations Detail</NavLink>
                 <NavLink to="/travel-agency-website/login">Login</NavLink>
                 <button className='nav-button nav-close-button' onClick={showNavbar}>
                     <BiCross />
