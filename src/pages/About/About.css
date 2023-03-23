@@ -1,0 +1,134 @@
+.about-container {
+  width: 85%;
+  margin: 2rem auto;
+}
+
+.about-inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-left-container,
+.about-right-container {
+  width: 50%;
+}
+
+.about-title {
+  font-size: 2rem;
+  position: relative;
+  color: #ff715b;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  border-radius: 30px;
+  display: block;
+  background: linear-gradient(90deg, #ff715b, transparent);
+}
+
+.about-description {
+  color: #212121;
+  line-height: 2;
+  margin-top: 1rem;
+  width: 70%;
+}
+
+.about-right-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-us-people,
+.about-us-facts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.person-item,
+.fact-item {
+  width: 33%;
+  margin-top: 1rem;
+}
+
+.person-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.person-name {
+  color: #212121;
+  position: relative;
+}
+
+.person-name::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  border-radius: 30px;
+  display: block;
+  background: linear-gradient(90deg, #212121, transparent);
+}
+
+.person-title {
+  margin-top: 1rem;
+  color: #ff715b;
+}
+
+.fact-item {
+  text-align: center;
+  background-color: #fff5f5;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+@media (max-width: 920px) {
+  .about-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .about-inner-container {
+    flex-direction: column;
+  }
+
+  .about-left-container,
+  .about-right-container {
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-description {
+    width: 100%;
+  }
+
+  .about-right-container img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 1rem;
+  }
+
+  .about-us-people,
+  .about-us-facts {
+    flex-direction: column;
+  }
+
+  .person-item,
+  .fact-item {
+    width: 100%;
+  }
+}
