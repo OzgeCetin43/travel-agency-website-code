@@ -83,12 +83,11 @@
 
 .person-title {
   margin-top: 1rem;
-  color: #ff715b;
 }
 
 .fact-item {
   text-align: center;
-  background-color: #fff5f5;
+  border: 1px solid #212121;
   padding: 2rem;
   border-radius: 1rem;
 }
@@ -109,11 +108,12 @@
   }
 
   .about-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .about-description {
     width: 100%;
+    font-size: 0.75rem;
   }
 
   .about-right-container img {
@@ -130,5 +130,22 @@
   .person-item,
   .fact-item {
     width: 100%;
+  }
+
+  .person-name {
+    font-size: 0.75rem;
+  }
+
+  .fact-item {
+    padding: 1rem;
+  }
+
+  .person-title,
+  .fact-item-description {
+    font-size: 0.75rem;
+  }
+
+  .fact-item-title {
+    font-size: 1rem;
   }
 }

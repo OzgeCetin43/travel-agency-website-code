@@ -1,94 +1,145 @@
-.destinations-detail-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.africa-content,
+.destination-details-inner-container,
+.good-to-know-container {
+  width: 85%;
+  margin: 2rem auto;
+}
+
+.africa-title,
+.destination-details-inner-container h1,
+.good-to-know-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.africa-description {
+  color: #212121;
+  opacity: 0.7;
+}
+
+.destinations-detail-items {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  background: #fff5f5;
+  justify-content: flex-start;
+  margin: 1rem 0;
 }
 
-.destinations-detail-image-box {
-  height: 685px;
-  overflow: hidden;
+.destination-detail-item {
+  width: 32.95%;
+  height: 500px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  margin: 0.15rem;
+  transition: all 1s ease-in-out;
 }
 
-.destinations-detail-image {
+.destination-detail-item:hover {
+  box-shadow: 0px 3px 12px #071c5526;
+}
+
+.destination-detail-item img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
+  border-radius: 1rem;
 }
 
-.destinations-detail-content-box {
-  padding: 10rem;
+.destination-detail-item h1 {
+  font-size: 1.25rem;
+  color: #ff715b;
+  text-align: center;
 }
 
-.destinations-detail-title {
-  font-size: 5rem;
-  margin-bottom: 0.25rem;
+.destination-detail-item b {
+  color: #ff715b;
 }
 
-.destinations-detail-description {
-  opacity: 0.6;
-  line-height: 2;
+.good-to-know-container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 1rem auto;
 }
 
-[data-reveal='left'] {
-  clip-path: inset(0 100% 0 0);
+.good-to-know-title {
+  width: 85%;
+  margin: 1rem auto;
 }
 
-[data-reveal='left'].reveal {
-  animation: reveal-left 500ms linear forwards 300ms;
+.good-to-now-left-container,
+.good-to-know-right-container {
+  width: 48%;
 }
 
-[data-reveal='right'] {
-  clip-path: inset(0 0 0 100%);
+.good-to-now-left-container table {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #212121;
 }
 
-[data-reveal='right'].reveal {
-  animation: reveal-right 500ms linear forwards 300ms;
+.good-to-now-left-container tr:not(:last-child) td {
+  width: 50%;
+  border-bottom: 1px solid #cfd3de;
 }
 
-@keyframes reveal-left {
-  0% {
-    clip-path: inset(0 100% 0 0);
-  }
-
-  100% {
-    clip-path: inset(0 0 0 0);
-  }
+.good-to-now-left-container tr td {
+  padding: 0.75rem;
 }
 
-@keyframes reveal-right {
-  0% {
-    clip-path: inset(0 0 0 100%);
-  }
-
-  100% {
-    clip-path: inset(0 0 0 0);
-  }
+.good-to-now-left-container tr td:last-child {
+  font-weight: bolder;
 }
 
 @media (max-width: 920px) {
-  .destinations-detail-container {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+  .africa-title,
+  .destination-details-inner-container h1,
+  .good-to-know-title {
+    font-size: 1.25rem;
   }
 
-  .destinations-detail-image-box {
-    height: 400px;
-    overflow: hidden;
-    margin: 1rem 0;
-  }
-
-  .destinations-detail-content-box {
-    padding: 1rem;
-  }
-
-  .destinations-detail-title {
-    font-size: 1.5rem;
-  }
-
-  .destinations-detail-description {
+  .africa-description {
     font-size: 0.75rem;
+  }
+
+  .destinations-detail-items {
+    flex-direction: column;
+  }
+
+  .destination-detail-item {
     width: 100%;
-    margin: 1rem 0;
+    height: auto;
+  }
+
+  .destination-detail-item h1 {
+    font-size: 1rem;
+  }
+
+  .destination-detail-item b {
+    color: #ff715b;
+  }
+
+  .destination-detail-item p {
+    font-size: 0.75rem;
+  }
+
+  .good-to-know-container {
+    flex-direction: column;
+  }
+
+  .good-to-now-left-container,
+  .good-to-know-right-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .good-to-now-left-container tr td {
+    padding: 0.35rem;
+    font-size: 0.75rem;
+  }
+
+  .good-to-know-right-container {
+    height: 300px;
   }
 }

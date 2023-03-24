@@ -1,57 +1,64 @@
-import React, { useEffect, useState } from 'react'
-import destination1 from "../../assets/images/destination1.png"
-import destination2 from "../../assets/images/destination2.png"
-import destination3 from "../../assets/images/destination3.png"
+import React from 'react'
+import Slider from '../../components/Slider/Slider'
+import { destinationsDetail } from "../../assets/data/destinationsDetail"
+import Map from '../../components/Map/Map'
 import "./DestinationsDetail.css"
 
 const DestinationsDetail = () => {
-    const [dataRevealElements, setDataRevealElements] = useState(null);
-    const revealElements = document.querySelectorAll("[data-reveal]");
-
-    const scrollReveal = () => {
-        for (let i = 0; i < dataRevealElements?.length; i++) {
-            const isElementsVisible = dataRevealElements[i].getBoundingClientRect().top < window.innerHeight;
-
-            if (isElementsVisible) {
-                dataRevealElements[i].classList.add("reveal")
-            }
-
-            else {
-                dataRevealElements[i].classList.remove("reveal");
-            }
-        }
-    }
-
-    useEffect(() => {
-        setDataRevealElements(revealElements);
-        scrollReveal();
-        window.addEventListener("scroll", scrollReveal);
-    }, [revealElements])
-
     return (
         <div className='destinations-detail-container'>
-            <div className='destinations-detail-image-box' data-reveal="left">
-                <img src={destination1} alt="destination" className='destinations-detail-image' />
+            <Slider />
+            <div className='africa-content'>
+                <h1 className="africa-title">Africa</h1>
+                <p className="africa-description">Africa is the world's second largest and second most-populous continent. At about 30.3 million km² including djacent islands, it covers 6% of Earth's total surface area and 20% of its land area. With 1.2 billion people as of 2016, it accounts for about 16% of the world's human population.</p>
             </div>
-            <div className="destinations-detail-content-box">
-                <h2 className='destinations-detail-title' data-reveal="left">France</h2>
-                <p className='destinations-detail-description' data-reveal="left">France is the world's second largest and second most- populous continent, being behind Asia in both. At about 30.3 million km² including adjacent islands, it 6% Earth's total surface area and 20%</p>
+            <div className='destination-details-inner-container'>
+                <h1>Based on traveller Visit and Local Insights</h1>
+                <div className='destinations-detail-items'>
+                    {
+                        destinationsDetail.map(item => (
+                            <div className="destination-detail-item" key={item.id}>
+                                <img src={item.image} alt="destination" />
+                                <h1>{item.name}</h1>
+                                <p><b>{item.name}</b> is the world's second largest and second most- populous continent, being behind Asia in both. At about 30.3 million km² including adjacent islands, it 6% Earth's total surface area and 20% land area.</p>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
-            <div className="destinations-detail-content-box">
-                <h2 className='destinations-detail-title' data-reveal="left">Italy</h2>
-                <p className='destinations-detail-description' data-reveal>Italy is the world's second largest and second most- populous continent, being behind Asia in both. At about 30.3 million km² including adjacent islands, it 6% Earth's total surface area and 20%</p>
+            <h1 className='good-to-know-title'>Good to Know</h1>
+            <div className='good-to-know-container'>
+                <div className="good-to-now-left-container">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Country</td>
+                                <td>Africa</td>
+                            </tr>
+                            <tr>
+                                <td>Visa Requirements</td>
+                                <td>Visa Requirements</td>
+                            </tr>
+                            <tr>
+                                <td>Languages Spoken</td>
+                                <td>Afroasiatic languages</td>
+                            </tr>
+                            <tr>
+                                <td>Currency Used</td>
+                                <td>Rant</td>
+                            </tr>
+                            <tr>
+                                <td>Areas (km2)</td>
+                                <td>30.37 million km²</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="good-to-know-right-container">
+                    <Map />
+                </div>
             </div>
-            <div className='destinations-detail-image-box' data-reveal="right">
-                <img src={destination2} alt="destination" className='destinations-detail-image' />
-            </div>
-            <div className='destinations-detail-image-box' data-reveal="left">
-                <img src={destination3} alt="destination" className='destinations-detail-image' />
-            </div>
-            <div className="destinations-detail-content-box">
-                <h2 className='destinations-detail-title' data-reveal="left">Singapore</h2>
-                <p className='destinations-detail-description' data-reveal="left">Singapore is the world's second largest and second most- populous continent, being behind Asia in both. At about 30.3 million km² including adjacent islands, it 6% Earth's total surface area and 20%</p>
-            </div>
-        </div>
+        </div >
     )
 }
 
