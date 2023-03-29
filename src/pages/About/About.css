@@ -14,13 +14,15 @@
   width: 50%;
 }
 
-.about-title {
+.about-title,
+.about-content-title {
   font-size: 2rem;
   position: relative;
   color: #ff715b;
 }
 
-.about-title::after {
+.about-title::after,
+.about-content-title::after {
   content: '';
   position: absolute;
   bottom: -0.25rem;
@@ -32,7 +34,8 @@
   background: linear-gradient(90deg, #ff715b, transparent);
 }
 
-.about-description {
+.about-description,
+.about-content-description {
   color: #212121;
   line-height: 2;
   margin-top: 1rem;
@@ -44,16 +47,97 @@
   object-fit: cover;
 }
 
-.about-us-people,
-.about-us-facts {
+.about-content {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.about-content-left,
+.about-content-right {
+  width: 50%;
+}
+
+.about-inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-content-item {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.about-content-item svg {
+  margin-right: 0.5rem;
+}
+
+.progress-bar-container {
+  margin: 1rem 0;
+  color: #212121;
+}
+
+.progress-bar-title {
+  margin: 0.5rem 0;
+}
+
+.progress-bar {
+  background-color: #fff5f5;
+  width: 75%;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.progress-bar div {
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  width: 0%;
+}
+
+.progress-bar div span {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  float: right;
+  margin-top: -0.75rem;
+  margin-right: -1.95rem;
+  color: #212121;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.best-serevices-progress-bar,
+.tour-agents-progress-bar {
+  background-color: #ff715b;
+}
+
+.best-serevices-progress-bar {
+  animation: best-services 3s linear forwards;
+}
+
+.tour-agents-progress-bar {
+  animation: tour-agents 3s linear forwards;
+}
+
+.about-content-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-people {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 1rem 0;
 }
 
-.person-item,
-.fact-item {
+.person-item {
   width: 33%;
   margin-top: 1rem;
 }
@@ -85,11 +169,16 @@
   margin-top: 1rem;
 }
 
-.fact-item {
-  text-align: center;
-  border: 1px solid #212121;
-  padding: 2rem;
-  border-radius: 1rem;
+@keyframes best-services {
+  100% {
+    width: 82%;
+  }
+}
+
+@keyframes tour-agents {
+  100% {
+    width: 63%;
+  }
 }
 
 @media (max-width: 920px) {
@@ -98,7 +187,8 @@
     width: 90%;
   }
 
-  .about-inner-container {
+  .about-inner-container,
+  .about-content {
     flex-direction: column;
   }
 
@@ -107,11 +197,14 @@
     width: 100%;
   }
 
-  .about-title {
+  .about-title,
+  .about-content-title {
     font-size: 1.25rem;
   }
 
-  .about-description {
+  .about-description,
+  .about-content-description,
+  .about-content-item {
     width: 100%;
     font-size: 0.75rem;
   }
@@ -122,13 +215,11 @@
     margin-top: 1rem;
   }
 
-  .about-us-people,
-  .about-us-facts {
+  .about-us-people {
     flex-direction: column;
   }
 
-  .person-item,
-  .fact-item {
+  .person-item {
     width: 100%;
   }
 
@@ -136,16 +227,24 @@
     font-size: 0.75rem;
   }
 
-  .fact-item {
-    padding: 1rem;
-  }
-
-  .person-title,
-  .fact-item-description {
+  .person-title {
     font-size: 0.75rem;
   }
 
-  .fact-item-title {
-    font-size: 1rem;
+  .about-content {
+    margin: 1rem 0;
+  }
+
+  .about-content-left,
+  .about-content-right {
+    width: 100%;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+
+  .progress-bar-title {
+    font-size: 0.75rem;
   }
 }
