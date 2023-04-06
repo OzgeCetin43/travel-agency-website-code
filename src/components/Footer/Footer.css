@@ -88,4 +88,12 @@
     top: -8px;
     margin-left: 2rem;
   }
+
+  .footer-item-title {
+    font-size: 0.9rem;
+  }
+
+  .footer-item-description {
+    font-size: 0.75rem;
+  }
 }
